@@ -1,0 +1,12 @@
+[Unit]
+Description=Boot Splash Screen
+DefaultDependencies=no
+After=local-fs.target
+
+[Service]
+ExecStart=/bin/sh -c '/usr/share/bootscreen/bannerd -vD /usr/share/bootscreen/frames/*.bmp'
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=local-fs.target
