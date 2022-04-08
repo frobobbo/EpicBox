@@ -39,7 +39,7 @@ sudo unzip ~/EpicBox/Setup/SPSBootLogo.zip -d /usr/share/bootscreen/
 sudo systemctl enable bootscreen
 
 git clone https://github.com/frobobbo/RaspiWiFi.git
-cd RaspiWiFi && sudo python ./initial_setup.py
+sudo python ~/RaspiWiFi/initial_setup.py
 
 sudo sed -i -e '$i \sleep 10 \n' /etc/rc.local
 sudo sed -i -e '$i \sh /home/pi/EpicBox/startup.sh > /home/pi/EpicBox/startuplog 2>&1 \n' /etc/rc.local
