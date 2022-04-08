@@ -20,6 +20,8 @@ python -m pip install configparser
 python -m pip install google-api-python-client
 python -m pip install pathlib
 
+git clone https://github.com/frobobbo/EpicBox.git
+
 git clone https://github.com/frobobbo/RaspiWiFi.git
 cd RaspiWiFi
 sudo python initial_setup.py

@@ -1,6 +1,9 @@
 # EpicBox
 Python Script to download photos from Google Photos/Instagram/Facebook (others?) and display
 
+# Installation:
+```wget -O - https://raw.githubusercontent.com/frobobbo/EpicBox/master/install.sh | bash```
+
 # TODO:
 1) Create Global Config file
 2) Incorporate the amazing work of https://github.com/jasbur/RaspiWiFi to create a user-friendly Wifi Setup process

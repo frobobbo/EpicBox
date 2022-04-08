@@ -23,15 +23,15 @@ print(client.list_objects(Bucket=bucketName)['Contents'])
 for key in client.list_objects(Bucket=bucketName)['Contents']:
     if key['Key'].endswith('/'):
         #This is for mulitple folders, it will create them
-        if not os.path.exists(os.path.join(configdir,customerFolder)):
-           os.makedirs(os.path.join(configdir,customerFolder))
+        if not os.path.exists(os.path.join(configdir,"photos")):
+           os.makedirs(os.path.join(configdir,"photos"))
     else:
         if key['Key'].startswith(customerFolder):
             print("The following file will be downloaded:")
             print('key.name',key['Key'])
             fileName=key['Key'].split('/')[1]
-            print(fileName + ' will be downloaded to: '+os.path.join(configdir,customerFolder,fileName))
-            client.download_file(bucketName,key['Key'], os.path.join(configdir,customerFolder,fileName))
+            print(fileName + ' will be downloaded to: '+os.path.join(configdir,"photos",fileName))
+            client.download_file(bucketName,key['Key'], os.path.join(configdir,"photos",fileName))
         else:
             print("The following file will NOT be downloaded:")
             print('key.name',key['Key'])
