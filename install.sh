@@ -1,14 +1,14 @@
 #! /bin/bash
 sudo apt update
 sudo apt upgrade
-sudo apt install git
+sudo apt install git -y
 # Remove Python2, set Python3 as default
-sudo apt remove python2
+sudo apt remove python2 -y
 sudo update-alternatives --install $(which python) python $(readlink -f $(which python3)) 3
-sudo apt install pip3
-sudo apt install libjpeg-dev
-sudo apt install fbi
-sudo apt install imagemagick
+sudo apt install pip3 -y
+sudo apt install libjpeg-dev -y
+sudo apt install fbi -y
+sudo apt install imagemagick -y
 python -m pip install --upgrade pip
 python -m pip install bota3
 python -m pip install httplib2
