@@ -43,3 +43,5 @@ sudo python ~/RaspiWiFi/initial_setup.py
 
 sudo sed -i -e '$i \sleep 10 \n' /etc/rc.local
 sudo sed -i -e '$i \sh /home/pi/EpicBox/Setup/startup.sh > /home/pi/EpicBox/Setup/startuplog 2>&1 \n' /etc/rc.local
+
+sudo systemctl unmask hostpad
