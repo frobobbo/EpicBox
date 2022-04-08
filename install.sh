@@ -35,7 +35,7 @@ sudo mkdir /usr/share/bootscreen/
 sudo cp ~/EpicBox/Setup/bannerd /usr/share/bootscreen
 sudo chmod +x /usr/share/bootscreen/bannerd
 sudo cp ~/EpicBox/Setup/bootscreen.service /etc/systemd/system
-sudo unzip SPSBootLogo.zip -d /usr/share/bootscreen/
+sudo unzip ~/EpicBox/Setup/SPSBootLogo.zip -d /usr/share/bootscreen/
 sudo systemctl enable bootscreen
 
 git clone https://github.com/frobobbo/RaspiWiFi.git
