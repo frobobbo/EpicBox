@@ -22,10 +22,10 @@ python -m pip install pathlib
 
 git clone https://github.com/foundObjects/zram-swap.git
 cd zram-swap && sudo ./install.sh
-sudo sed -i -e '$i \vm.vfs_cache_pressure=500 \n' /etc/sysctl.conf
-sudo sed -i -e '$i \vm.swappiness=100 \n' /etc/sysctl.conf
-sudo sed -i -e '$i \vm.dirty_background_ratio=1 \n' /etc/sysctl.conf
-sudo sed -i -e '$i \vm.dirty_ratio=50 \n' /etc/sysctl.conf
+sudo sed -i -e '$i \vm.vfs_cache_pressure=500' /etc/sysctl.conf
+sudo sed -i -e '$i \vm.swappiness=100' /etc/sysctl.conf
+sudo sed -i -e '$i \vm.dirty_background_ratio=1' /etc/sysctl.conf
+sudo sed -i -e '$i \vm.dirty_ratio=50' /etc/sysctl.conf
 
 git clone https://github.com/frobobbo/EpicBox.git
 sudo sed -i -e '$i \disable_splash=1 \n' /boot/config.txt
