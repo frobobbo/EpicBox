@@ -4,7 +4,7 @@ DefaultDependencies=no
 After=local-fs.target
 
 [Service]
-ExecStart=/bin/sh -c '/usr/share/bootscreen/bannerd -vD /usr/share/bootscreen/frames/*.bmp'
+ExecStart=/bin/sh -c '/usr/share/bootscreen/bannerd -vD /usr/share/bootscreen/SPSBootLogo/*.bmp'
 StandardInput=tty
 StandardOutput=tty
 
