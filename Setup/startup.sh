@@ -19,7 +19,7 @@ then
     sudo service bootscreen stop
 
     #Display the WiFi Connect Instructions
-    sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
+    sudo fbi -T 1 -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
 else
     echo "The Device is Online"
     #launch the python script to download the files
