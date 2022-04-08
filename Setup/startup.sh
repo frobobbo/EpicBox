@@ -8,7 +8,7 @@
 IFACE=wlan0
 read MAC </sys/class/net/$IFACE/address
 
-#curl -X POST -F "BoxID=$MAC" https://auth.cstoneweb.com/getConfig.php -o /home/pi/PhotoFrame/config.ini
+#curl -X POST -F "BoxID=$MAC" https://auth.cstoneweb.com/getConfig.php -o /home/pi/EpicBox/config.ini
 
 tail -n+3 /proc/net/wireless | grep -q . && OFFLINE="N" || OFFLINE="Y"
 
