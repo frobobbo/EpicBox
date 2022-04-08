@@ -29,7 +29,7 @@ sudo sed -i -e '$i \vm.dirty_ratio=50 \n' /etc/sysctl.conf
 
 git clone https://github.com/frobobbo/EpicBox.git
 sudo sed -i -e '$i \disable_splash=1 \n' /boot/config.txt
-sudo sed 's/$/ console=tty3 logo.nologo vt.global_cursor_default=0 quiet/' /boot/cmdline.txt
+sudo sed -i -e 's/$/ console=tty3 logo.nologo vt.global_cursor_default=0 quiet/' /boot/cmdline.txt
 sudo mkdir /usr/share/bootscreen/
 sudo cp ~/EpicBox/Setup/bannerd /usr/share/bootscreen
 sudo chmod +x /usr/share/bootscreen/bannerd
