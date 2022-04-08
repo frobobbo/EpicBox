@@ -12,7 +12,7 @@ read MAC </sys/class/net/$IFACE/address
 
 tail -n+3 /proc/net/wireless | grep -q . && OFFLINE="N" || OFFLINE="Y"
 
-if [[ $OFFLINE -eq 'Y' ]]
+if [ $OFFLINE = 'Y' ]
 then
     echo "The Device is Offline"
     # stop the bootscreen service
