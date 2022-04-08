@@ -21,7 +21,7 @@ then
     #Display the WiFi Connect Instructions
     sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
 else
-    echo "The Device is Omline"
+    echo "The Device is Online"
     #launch the python script to download the files
     sudo -u pi python /home/pi/PhotoFrame/launch.py
 
