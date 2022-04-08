@@ -19,17 +19,25 @@ then
     sudo service bootscreen stop
 
     #Display the WiFi Connect Instructions
-    sudo fbi -T 1 -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
+    sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
 else
     echo "The Device is Online"
     #launch the python script to download the files
-    sudo -u pi python /home/pi/PhotoFrame/launch.py
+    #sudo -u pi python /home/pi/PhotoFrame/launch.py
 
     # stop the bootscreen service
     sudo service bootscreen stop
 
     #launch the fbi slideshow
-    sudo fbi -T 1 -noverbose -a -t 60 -u /home/pi/EpicBox/photos/* 
+    DIR="/home/pi/EpicBox/photos/"
+    if [ "$(ls -A $DIR)" ]; then
+      #Dir is not Empty
+      sudo fbi -T 1 -noverbose -a -t 60 -u /home/pi/EpicBox/photos/* 
+    else
+      # Dir is Empty
+    sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiConnected.jpg   
+    fi
+
 fi
 
 
