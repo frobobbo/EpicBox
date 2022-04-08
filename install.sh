@@ -5,7 +5,7 @@ sudo apt install git -y
 # Remove Python2, set Python3 as default
 sudo apt remove python2 -y
 sudo update-alternatives --install $(which python) python $(readlink -f $(which python3)) 3
-sudo apt install pip3 -y
+sudo apt install python3-pip -y
 sudo apt install libjpeg-dev -y
 sudo apt install fbi -y
 sudo apt install imagemagick -y
