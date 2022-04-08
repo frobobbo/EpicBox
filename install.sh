@@ -45,3 +45,5 @@ sudo sed -i -e '$i \sleep 10 \n' /etc/rc.local
 sudo sed -i -e '$i \sh /home/pi/EpicBox/Setup/startup.sh > /home/pi/EpicBox/Setup/startuplog 2>&1 \n' /etc/rc.local
 
 sudo systemctl unmask hostapd
+sudo systemctl disable getty@tty1
+sudo reboot
