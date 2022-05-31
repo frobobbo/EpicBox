@@ -1,6 +1,6 @@
 #! /bin/bash
 sudo apt update
-sudo apt upgrade -y
+sudo apt -y upgrade
 sudo apt install git -y
 # Remove Python2, set Python3 as default
 sudo apt remove python2 -y
