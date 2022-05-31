@@ -25,7 +25,7 @@ job2.hour.on(int(offTime))
 job.enable
 job2.enable
 
-job3 = cron.new(command='python /home/pi/EpicBox/runActions.sh', comment='Actions')
+job3 = cron.new(command='sh /home/pi/EpicBox/runActions.sh', comment='Actions')
 job3.minute.every(5)
 job3.enable
 
