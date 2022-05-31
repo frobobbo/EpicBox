@@ -2,13 +2,16 @@
 # startup.sh
 # launch the photo fram python script
 
+sudo pkill -f fbi
+sudo service bootscreen start
+
 # download the latest config file
 # TODO: This URL should and frameID should be pulled from a Global Config file
 
 IFACE=wlan0
 read MAC </sys/class/net/$IFACE/address
 
-#curl -X POST -F "BoxID=$MAC" https://auth.cstoneweb.com/getConfig.php -o /home/pi/EpicBox/config.ini
+curl -X POST -F "mac=$MAC" https://epicplan.net/epicbox/getConfig.php -o /home/pi/EpicBox/config.ini
 
 tail -n+3 /proc/net/wireless | grep -q . && OFFLINE="N" || OFFLINE="Y"
 
@@ -22,8 +25,11 @@ then
     sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiSetup.jpg   
 else
     echo "The Device is Online"
+    #lanuch the python script to update settings
+    sudo -u pi python /home/pi/EpicBox/updateSettings.py
+
     #launch the python script to download the files
-    #sudo -u pi python /home/pi/PhotoFrame/launch.py
+    sudo -u pi python /home/pi/EpicBox/downloadFiles.py
 
     # stop the bootscreen service
     sudo service bootscreen stop

@@ -19,6 +19,7 @@ python -m pip install tlslite
 python -m pip install configparser
 python -m pip install google-api-python-client
 python -m pip install pathlib
+python -m pip install python-crontab
 
 git clone https://github.com/foundObjects/zram-swap.git
 sudo ./zram-swap/install.sh
