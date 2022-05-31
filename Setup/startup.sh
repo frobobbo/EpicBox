@@ -3,7 +3,7 @@
 # launch the photo fram python script
 
 sudo pkill -f fbi
-sudo service bootscreen start
+sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/imagesDownloading.jpg   
 
 # download the latest config file
 # TODO: This URL should and frameID should be pulled from a Global Config file
