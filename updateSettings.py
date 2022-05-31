@@ -10,8 +10,8 @@ Config = configparser.ConfigParser()
 Config.read(Config.read(os.path.join(configdir,"config.ini")))
 
 #This Information should be pulled from a config file, which is pulled from Web
-onTime = Config.get('Settings','onTime')
-offTime = Config.get('Settings','offTime')
+onTime = Config.get('Settings','timeOn')
+offTime = Config.get('Settings','timeOff')
 
 
 cron = CronTab(tabfile='/etc/crontab', user=False)  # system users cron
