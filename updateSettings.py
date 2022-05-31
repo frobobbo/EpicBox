@@ -14,7 +14,7 @@ onTime = Config.get('Settings','timeOn')
 offTime = Config.get('Settings','timeOff')
 
 
-cron = CronTab(tabfile='/etc/crontab', user=False)  # system users cron
+cron = CronTab(user='root')  # system users cron
 cron.remove_all()
 
 job = cron.new(command='sh /home/pi/EpicBox/cronjobs/wake.sh', comment='Wake')
