@@ -15,7 +15,7 @@ offTime = Config.get('Settings','timeOff')
 checkIn = Config.get('Settings','checkIn')
 
 
-cron = CronTab(user='root')  # system users cron
+cron = CronTab(user='pi')  # system users cron
 cron.remove_all()
 
 job = cron.new(command='sh /home/pi/EpicBox/cronjobs/wake.sh', comment='Wake')
@@ -26,7 +26,7 @@ job2.hour.on(int(offTime))
 job.enable
 job2.enable
 
-job3 = cron.new(command='sh /home/pi/EpicBox/runActions.sh', comment='Actions')
+job3 = cron.new(command='sh /home/pi/EpicBox/cronjobs/runActions.sh', comment='Actions')
 job3.minute.every(int(checkIn))
 job3.enable
 

@@ -9,17 +9,17 @@ sudo apt install python3-pip -y
 sudo apt install libjpeg-dev -y
 sudo apt install fbi -y
 sudo apt install imagemagick -y
-sudo python -m pip install --upgrade pip
-sudo python -m pip install boto3
-sudo python -m pip install httplib2
-sudo python -m pip install oauth2client
-sudo python -m pip install Pillow
-sudo python -m pip install python-instagram
-sudo python -m pip install tlslite
-sudo python -m pip install configparser
-sudo python -m pip install google-api-python-client
-sudo python -m pip install pathlib
-sudo python -m pip install python-crontab
+python -m pip install --upgrade pip
+python -m pip install boto3
+python -m pip install httplib2
+python -m pip install oauth2client
+python -m pip install Pillow
+python -m pip install python-instagram
+python -m pip install tlslite
+python -m pip install configparser
+python -m pip install google-api-python-client
+python -m pip install pathlib
+python -m pip install python-crontab
 
 git clone https://github.com/foundObjects/zram-swap.git
 sudo ./zram-swap/install.sh
