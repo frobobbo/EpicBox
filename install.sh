@@ -20,15 +20,15 @@ python -m pip install configparser
 python -m pip install google-api-python-client
 python -m pip install pathlib
 python -m pip install python-crontab
-read -p "Press any key to resume ..."
 
 git clone https://github.com/foundObjects/zram-swap.git
-sudo ./zram-swap/install.sh
+cd ./zram-script
+sudo ./install.sh
 sudo sed -i -e '$i \vm.vfs_cache_pressure=500' /etc/sysctl.conf
 sudo sed -i -e '$i \vm.swappiness=100' /etc/sysctl.conf
 sudo sed -i -e '$i \vm.dirty_background_ratio=1' /etc/sysctl.conf
 sudo sed -i -e '$i \vm.dirty_ratio=50' /etc/sysctl.conf
-read -p "Press any key to resume ..."
+cd ~
 
 git clone https://github.com/frobobbo/EpicBox.git
 sudo sed -i -e '$i \disable_splash=1 \n' /boot/config.txt
@@ -40,19 +40,15 @@ sudo chmod +x /usr/share/bootscreen/bannerd
 sudo cp ~/EpicBox/Setup/bootscreen.service /etc/systemd/system
 sudo unzip ~/EpicBox/Setup/SPSBootLogo.zip -d /usr/share/bootscreen/
 sudo systemctl enable bootscreen
-read -p "Press any key to resume ..."
 
 git clone https://github.com/frobobbo/RaspiWiFi.git
 sudo python ~/RaspiWiFi/initial_setup.py
-read -p "Press any key to resume ..."
 
 sudo sed -i -e '$i \sleep 10 \n' /etc/rc.local
 sudo sed -i -e '$i \sh /home/pi/EpicBox/Setup/startup.sh > /home/pi/EpicBox/Setup/startuplog 2>&1 \n' /etc/rc.local
-read -p "Press any key to resume ..."
 
 sudo systemctl unmask hostapd
 sudo systemctl disable getty@tty1
-setterm -term linux -background black -foreground black >/dev/tty0
+sudo setterm -term linux -background black -foreground black >/dev/tty0
 
-read -p "Press any key to resume ..."
-sudo reboot
+sudo shutdown now
