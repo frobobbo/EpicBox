@@ -3,7 +3,7 @@ import os
 import configparser
 from crontab import CronTab
 
-configdir = os.path.expanduser("~/EpicBox")
+configdir = os.path.expanduser("/home/pi/EpicBox")
 #configdir = os.path.expanduser("~\Documents\Projects\EpicBox")
 
 Config = configparser.ConfigParser()
