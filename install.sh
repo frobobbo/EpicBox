@@ -47,4 +47,5 @@ sudo sed -i -e '$i \sh /home/pi/EpicBox/Setup/startup.sh > /home/pi/EpicBox/Setu
 
 sudo systemctl unmask hostapd
 sudo systemctl disable getty@tty1
+setterm -term linux -background black -foreground black >/dev/tty0
 sudo reboot
