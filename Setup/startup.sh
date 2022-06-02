@@ -39,7 +39,7 @@ else
       sudo fbi -T 1 -noverbose -a -t 60 -u /home/pi/EpicBox/photos/* 
     else
       # Dir is Empty
-    sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiConnected.jpg   
+      sudo fbi -T 1 -noverbose -a /home/pi/EpicBox/Setup/wifiConnected.jpg   
     fi
 
 fi
