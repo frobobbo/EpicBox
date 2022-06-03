@@ -22,7 +22,7 @@ python -m pip install pathlib
 python -m pip install python-crontab
 
 git clone https://github.com/foundObjects/zram-swap.git
-cd /home/pi/zram-script
+cd /home/pi/zram-swap
 sudo sh ./install.sh
 sudo sed -i -e '$i \vm.vfs_cache_pressure=500' /etc/sysctl.conf
 sudo sed -i -e '$i \vm.swappiness=100' /etc/sysctl.conf
