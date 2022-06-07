@@ -9,6 +9,8 @@ sudo apt install python3-pip -y
 sudo apt install libjpeg-dev -y
 sudo apt install fbi -y
 sudo apt install imagemagick -y
+sudo apt install omxplayer -y
+sudo apt install ffmpeg -y
 python -m pip install --upgrade pip
 python -m pip install boto3
 python -m pip install httplib2
@@ -42,12 +44,12 @@ sudo unzip ~/EpicBox/Setup/SPSBootLogo.zip -d /usr/share/bootscreen/
 sudo systemctl enable bootscreen
 
 git clone https://github.com/frobobbo/RaspiWiFi.git
-sudo python ~/RaspiWiFi/initial_setup.py
+#sudo python ~/RaspiWiFi/initial_setup.py
 
 sudo sed -i -e '$i \sleep 10 \n' /etc/rc.local
 sudo sed -i -e '$i \sudo -u pi sh /home/pi/EpicBox/Setup/startup.sh > /home/pi/EpicBox/Setup/startuplog 2>&1 \n' /etc/rc.local
 
-sudo systemctl unmask hostapd
+#sudo systemctl unmask hostapd
 sudo systemctl disable getty@tty1
 sudo setterm -term linux -background black -foreground black >/dev/tty0
 
